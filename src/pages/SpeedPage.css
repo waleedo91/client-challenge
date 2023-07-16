@@ -1,0 +1,7 @@
+.main-page {
+  display: flex;
+  border: 1px solid black;
+  align-items: center;
+  justify-content: space-around;
+  height: 50vh;
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import "./Steps.css";
 
 function Steps() {
   return (

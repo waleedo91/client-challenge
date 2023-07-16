@@ -4,8 +4,8 @@ import "./StepsList.css";
 
 function StepsList() {
   return (
-    <div>
-      <table style={{ width: "30%" }}>
+    <div className="steps-list">
+      <table>
         <thead>
           <tr>
             <th>Step</th>
