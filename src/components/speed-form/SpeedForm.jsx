@@ -101,13 +101,12 @@ function SpeedForm({ data }) {
             </label>
             {directionOption}
           </div>
-          <div>
+          <div className="button-set">
             <Button type="submit">Save</Button>
+            <Button onClick={handleCancel}>Cancel</Button>
+            <Button>Delete</Button>
           </div>
         </form>
-        <Button type="cancel" onClick={handleCancel}>
-          Cancel
-        </Button>
       </div>
     </div>
   );

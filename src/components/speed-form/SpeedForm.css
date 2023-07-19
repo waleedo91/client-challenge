@@ -35,3 +35,8 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+.button-set {
+  display: flex;
+  justify-content: space-around;
+}
