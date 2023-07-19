@@ -28,6 +28,13 @@ function SpeedForm({ data }) {
     setDirection(e.target.value);
   };
 
+  const handleCancel = () => {
+    setHour("");
+    setMinute("");
+    setDirection("");
+    setStep("");
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setSpeedData([
@@ -94,8 +101,13 @@ function SpeedForm({ data }) {
             </label>
             {directionOption}
           </div>
-          <Button type="submit">Save</Button>
+          <div>
+            <Button type="submit">Save</Button>
+          </div>
         </form>
+        <Button type="cancel" onClick={handleCancel}>
+          Cancel
+        </Button>
       </div>
     </div>
   );
