@@ -10,7 +10,7 @@ function SpeedForm({ data }) {
   const [hour, setHour] = useState("");
   const [step, setStep] = useState("Walk");
   const [direction, setDirection] = useState("North");
-  const [speedData, setSpeedData] = useState([{}]);
+  const [speedData, setSpeedData] = useState([]);
 
   const handleMinute = (e) => {
     setMinute(e.target.value);
@@ -40,6 +40,7 @@ function SpeedForm({ data }) {
     setSpeedData([
       ...speedData,
       {
+        id: Math.random(Math.floor()),
         step,
         minute,
         hour,
