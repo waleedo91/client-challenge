@@ -1,22 +1,25 @@
-import StepMin from "../components/sections/top-section/StepMin";
-import HoursDirection from "../components/sections/bottom-section/HoursDirection";
-import ButtonsSection from "../components/sections/button-section/ButtonsSection";
-import StepsList from "../components/step-list/StepsList";
+import SpeedForm from "../components/speed-form/SpeedForm";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import "./SpeedPage.css";
 
 // TODO: Replace all inputs and dropdowns with api information.
 
 function SpeedPage() {
+  const [speeds, setSpeeds] = useState([]);
+
+  useEffect(() => {
+    const speedData = async () => {
+      const fetchSpeeds = await axios.get("http://localhost:8080/speed-list");
+      const response = await fetchSpeeds.data;
+      setSpeeds(response);
+    };
+    speedData();
+  }, []);
+
   return (
     <div className="main-page">
-      <div>
-        <StepsList />
-      </div>
-      <div>
-        <StepMin />
-        <HoursDirection />
-        <ButtonsSection />
-      </div>
+      <SpeedForm data={speeds} />
     </div>
   );
 }

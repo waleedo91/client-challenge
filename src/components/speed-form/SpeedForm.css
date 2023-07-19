@@ -1,0 +1,37 @@
+.step-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5em;
+}
+
+.step-form {
+  width: 30em;
+}
+
+#hour {
+  width: 7em;
+}
+
+#minute {
+  width: 7em;
+}
+
+#direction {
+  width: 7em;
+}
+
+#step {
+  width: 7em;
+}
+
+.steps-min {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hours-direction {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
